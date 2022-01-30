@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 export default function Input() {
     const { search } = useSearch()
-    const [ city, setCity ] = useState('Luziânia')
+    const [ city, setCity ] = useState('')
 
     return (
         <>
