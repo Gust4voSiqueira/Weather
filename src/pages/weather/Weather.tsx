@@ -11,9 +11,15 @@ import rain from "../../images/rain.png"
 import thunderstorm from "../../images/thunderstorm.png"
 import snow from "../../images/snow.png"
 import mist from "../../images/mist.png"
+import { useEffect } from 'react'
 
 export default function Weather() {
 const { weather } = useSearch()
+
+useEffect(() => {
+  imageSearch()
+// eslint-disable-next-line react-hooks/exhaustive-deps
+}, [weather])
 
 const imageSearch = () => {
   if(weather.weather !== undefined) {
