@@ -1,8 +1,6 @@
 import Input from '../../components/input/Input'
 import './Weather.css'
-import Header from '../../components/header/Header'
 import { useSearch } from '../../services/useSearch'
-import { useEffect, useState } from 'react'
 
 import clearSky from "../../images/clear-sky.png"
 import fewClouds from "../../images/few-clouds.png"
