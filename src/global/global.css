@@ -7,11 +7,7 @@
 }
 
 body {
-    background: var(--background-rain);
-}
-
-:root {
-    --background-rain: #060D26;
-    --background-input: #2C303F;
-    --background-header: #101A39;
+    background: linear-gradient(45deg, #77ffe9, #3ff0e4);
+    height: 100vh;
+    color: #041716;
 }

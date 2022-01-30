@@ -8,7 +8,7 @@ export default function Landing() {
         <div className='landing-container'>
             <Input />
 
-            <div className='banner'>
+            <div className='banner-landing'>
                 <img src={bannerLanding} alt='Banner' />
         
                 <h1>Seja Bem-Vindo!</h1>

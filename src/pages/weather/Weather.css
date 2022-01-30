@@ -1,35 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Rubik:wght@400;700&display=swap');
 
 div.Weather-container {
-    background: var(--background);
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
 
+    font-family: 'Poppins';
     padding: 30px 0;
 }
-  
-  div.Weather-container  div.banner img{
+
+div.Weather-container  img{
     width: 60%;
 }
 
-div.Weather-container  div.banner h1 {
-    font-size: 4.5rem;
-    font-weight: 700;
-    margin-top: 0px;
+div.Weather-container  p {
+    font-size: 13rem;
+    font-weight: 500;
 }
 
-div.Weather-container  div.banner .temp-umd-container{
+div.Weather-container  p.city-name {
+    font-size: 20pt;
+    font-weight: 900;
+    display: block;
+    margin-top: 50px;
+}
+
+div.Weather-container  .temp-umd-container{
     display: flex;
     justify-content: space-between;
 
-    color: white;
     width: 45%;
-    margin-top: 30px;
 }
 
-div.Weather-container  div.banner .temp-umd-container .temperatura, .umidade {
+div.Weather-container .temp-umd-container .temperatura, .umidade {
     display: flex;
     flex-direction: column;
 
@@ -38,8 +42,13 @@ div.Weather-container  div.banner .temp-umd-container .temperatura, .umidade {
 
     font-family: 'Poppins', serif;
     font-size: 15pt;
+    margin-top: 40px;
 }
 
-div.Weather-container  div.banner .temp-umd-container .temperatura, .umidade span{
-    font-weight: normal;
+div.Weather-container .temp-umd-container .temperatura, .umidade span{
+    font-weight: 200;
+}
+.icon-grau {
+    font-size: 5rem;
+    text-align: center;
 }

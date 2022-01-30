@@ -4,31 +4,58 @@ import Header from '../../components/header/Header'
 import { useSearch } from '../../services/useSearch'
 import { useEffect, useState } from 'react'
 
+import clearSky from "../../images/clear-sky.png"
+import fewClouds from "../../images/few-clouds.png"
+import scatteredClouds from "../../images/scattered-clouds.png"
+import brokenClouds from "../../images/broken-clouds.png"
+import showerRain from "../../images/shower-rain.png"
+import rain from "../../images/rain.png"
+import thunderstorm from "../../images/thunderstorm.png"
+import snow from "../../images/snow.png"
+import mist from "../../images/mist.png"
 
 export default function Weather() {
 const { weather } = useSearch()
-const [ image, setImage ] = useState("")
 
-useEffect(() => {
+const imageSearch = () => {
   if(weather.weather !== undefined) {
-    fetch(`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`)
-    .then(response => setImage(response.url)) 
+    switch (weather.weather[0].main) {
+      case "Clear":
+        return clearSky
+      case "Clouds":
+        return fewClouds
+      case "scattered clouds":
+        return scatteredClouds
+      case "broken clouds":
+        return brokenClouds
+      case "Drizzle":
+        return showerRain
+      case "Rain":
+        return rain
+      case "thunderstorm":
+        return thunderstorm
+      case "Snow":
+        return snow
+      case "mist":
+        return mist
+    }
+  } else {
+    return
   }
-}, [weather])
+}
 
-console.log(weather)
     return (
         <div className='Weather-container'>
-            <Input />
-            <Header />
-            <div className='banner'>
-              <img src={image} alt="" />
-               
-               <h1>{
+        <Input />
+               <p className='city-name'>{weather.name}</p>
+               <p>{
                       weather.main !== undefined ? 
-                      (<span style={{fontWeight: "800"}}>{(weather.main.temp).toFixed(0)}ºC</span>) :
-                      (<span style={{fontWeight: "800"}}>Aguarde</span>)
-                    }</h1>
+                      (<span>{(weather.main.temp).toFixed(0)}<span className='icon-grau'>º</span></span>) :
+                      (<span>Aguarde</span>)
+                    }</p>
+                    
+                    {weather.weather !== undefined ? (<img src={imageSearch()} alt="" />) : console.log('nAO')}
+              
 
                <div className='temp-umd-container'>
                     <div className='temperatura'>
@@ -50,7 +77,6 @@ console.log(weather)
                           (<span style={{fontWeight: "800"}}>Aguarde</span>)
                         }
                         </span>
-                    </div>
                </div>
             </div>
         </div>
