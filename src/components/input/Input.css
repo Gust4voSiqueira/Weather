@@ -1,0 +1,34 @@
+
+.submit-lente {
+    position:absolute;
+    top: 11px;
+    right: 10px;
+    z-index:10;
+    border:none;
+    background:transparent;
+    outline:none;
+  
+    font-size: 17pt;
+    color: #F4F4F4;
+    cursor: pointer;
+  }
+  
+  .submit-line {
+    position: relative;
+    width: 90%;
+  }
+  
+  .submit-line input {
+    width: 100%;
+    height: 3rem;
+    background: var(--background-input);
+    font-family: 'Roboto Slab', serif;
+    color: white;
+    font-size: 13pt;
+    
+    border-radius: 13px;
+    padding: 0 20px;
+  
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,26 @@
+div.header-container{
+    position: absolute;
+
+    bottom: 0;
+    background: var(--background-header);
+    width: 100%;
+    padding: 30px 100px;
+}
+
+div.header-container nav{
+   display: flex;
+   justify-content: space-between;
+
+   width: 100%;
+}
+
+div.header-container nav li{
+    list-style: none;
+}
+ 
+ div.header-container nav li .icons{
+   font-size: 20pt;
+   color: white;
+
+   cursor: pointer;
+}
