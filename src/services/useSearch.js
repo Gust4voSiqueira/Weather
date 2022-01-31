@@ -15,7 +15,6 @@ export default function SearchProvider({ children }) {
         .then(result => {
             setWeather(result)
         });
-
     }
 
         const store = {

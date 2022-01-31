@@ -18,7 +18,8 @@ div.banner-landing {
 }
 
 div.banner-landing img {
-    width: 100%;
+    width: 60%;
+    margin: auto;
 }
 
 div.banner-landing h1, p {
@@ -30,7 +31,7 @@ div.banner-landing h1 {
     font-size: 30pt;
     
     display: block;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 div.banner-landing p {

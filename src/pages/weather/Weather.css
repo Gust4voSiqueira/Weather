@@ -43,6 +43,7 @@ div.Weather-container .temp-umd-container .temperatura, .umidade {
     font-family: 'Poppins', serif;
     font-size: 15pt;
     margin-top: 40px;
+    padding-bottom: 40px;
 }
 
 div.Weather-container .temp-umd-container .temperatura, .umidade span{
@@ -50,5 +51,20 @@ div.Weather-container .temp-umd-container .temperatura, .umidade span{
 }
 .icon-grau {
     font-size: 5rem;
-    text-align: center;
 }
+
+  .c-loader {
+    animation: is-rotating 1s infinite;
+    border: 10px solid #031716;
+    border-radius: 50%;
+    border-top-color: #51d4db;
+    height: 150px;
+    width: 150px;
+    margin-top: 200px;
+  }
+  
+  @keyframes is-rotating {
+    to {
+      transform: rotate(1turn);
+    }
+  }

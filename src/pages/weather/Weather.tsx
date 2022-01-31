@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import Input from '../../components/input/Input'
 import './Weather.css'
 import { useSearch } from '../../services/useSearch'
@@ -18,7 +19,6 @@ const { weather } = useSearch()
 
 useEffect(() => {
   imageSearch()
-// eslint-disable-next-line react-hooks/exhaustive-deps
 }, [weather])
 
 const imageSearch = () => {
@@ -48,41 +48,53 @@ const imageSearch = () => {
   }
 }
 
-    return (
-        <div className='Weather-container'>
-        <Input />
-               <p className='city-name'>{weather.name}</p>
-               <p>{
-                      weather.main !== undefined ? 
-                      (<span>{(weather.main.temp).toFixed(0)}<span className='icon-grau'>º</span></span>) :
-                      (<span>Aguarde</span>)
-                    }</p>
-                    
-                    {weather.weather !== undefined ? (<img src={imageSearch()} alt="" />) : console.log('nAO')}
+
+return (
+  <div className='Weather-container'>
+  <Input />
+         <p className='city-name'>{weather.name}</p>
+         <p>{
+                weather.main !== undefined ? 
+                (<><span>{(weather.main.temp).toFixed(0)}</span><span className='icon-grau'>º</span></>) :
+                (<span></span>)
+              }</p>
               
+              {weather.weather !== undefined ? (<img src={imageSearch()} alt="Banner" />) : (<div className="c-loader"></div>)}
+        
 
-               <div className='temp-umd-container'>
-                    <div className='temperatura'>
-                        <span>Temp</span>
-                        {
-                          weather.main !== undefined ? 
-                          (<span style={{fontWeight: "800"}}>{(weather.main.temp).toFixed(0)}ºC</span>) :
-                          (<span style={{fontWeight: "800"}}>Aguarde</span>)
-                        }
-                        
-                    </div>
+         <div className='temp-umd-container'>
+              <div className='temperatura'>
+              {
+                    weather.main !== undefined ?
+                  (
+                    <>
+                    <span>Temp</span>
+                    <span style={{fontWeight: "800"}}>{(weather.main.temp).toFixed(0)}ºC</span>
+                    </>
+                  ) :
+                  (<span style={{fontWeight: "800"}}></span>)
+                  }
+                  
+              </div>
 
-                    <div className='umidade'>
-                        <span>Umidade</span>
-                        <span style={{fontWeight: "800"}}>
-                        {
-                          weather.main !== undefined ? 
-                          (<span style={{fontWeight: "800"}}>{weather.main.humidity}%</span>) :
-                          (<span style={{fontWeight: "800"}}>Aguarde</span>)
-                        }
-                        </span>
-               </div>
-            </div>
-        </div>
-    )
+              <div className='umidade'>
+              {
+                    weather.main !== undefined ?
+                  (
+                    <>
+                    <span>Umidade</span>
+                      <span style={{fontWeight: "800"}}>{weather.main.humidity}%</span>
+                    </>
+                  )
+                     :
+                    (<span style={{fontWeight: "800"}}></span>)
+                  }
+         </div>
+      </div>
+  </div>
+  ) 
+
+      
+        
+
 }

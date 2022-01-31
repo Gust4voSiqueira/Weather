@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 export default function Input() {
     const { search } = useSearch()
-    const [ city, setCity ] = useState('')
+    const [ city, setCity ] = useState('Luziânia')
 
     return (
         <>
@@ -18,6 +18,7 @@ export default function Input() {
                     
                     <Link to="/Weather">
                         <div className="submit-lente" onClick={() => {
+                            city.trim()
                             search(city)
                         }}>
                         < BsSearch />
