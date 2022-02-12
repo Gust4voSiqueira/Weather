@@ -10,7 +10,8 @@ export default function SearchProvider({ children }) {
     }
 
     const search = (city) => {
-        fetch(`${api.base}weather?q=${city}&units=metric&APPID=${api.key}`)
+        const localCity = city.trim()
+        fetch(`${api.base}weather?q=${localCity}&units=metric&APPID=${api.key}`)
         .then(res => res.json())
         .then(result => {
             setWeather(result)

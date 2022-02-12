@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&family=Roboto+Slab:wght@400;700&family=Rubik:wght@400;700&display=swap');
-
 div.landing-container {
     display: flex;
     flex-direction: column;
@@ -10,7 +9,7 @@ div.landing-container {
 }
 
 div.banner-landing {
-    margin-top: 150px;
+    margin-top: 40px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -18,8 +17,7 @@ div.banner-landing {
 }
 
 div.banner-landing img {
-    width: 60%;
-    margin: auto;
+    width: 20%;
 }
 
 div.banner-landing h1, p {
@@ -37,4 +35,22 @@ div.banner-landing h1 {
 div.banner-landing p {
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
+}
+
+
+@media (max-width: 1048px) {
+    div.banner-landing {
+        margin-top: 150px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    div.banner-landing img {
+        width: 60%;
+        margin: auto;
+    }
+    
+    
 }

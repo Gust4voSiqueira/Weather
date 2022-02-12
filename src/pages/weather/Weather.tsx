@@ -53,9 +53,9 @@ return (
   <div className='Weather-container'>
   <Input />
          <p className='city-name'>{weather.name}</p>
-         <p>{
+         <p className='temperatura-container'>{
                 weather.main !== undefined ? 
-                (<><span>{(weather.main.temp).toFixed(0)}</span><span className='icon-grau'>º</span></>) :
+                (<><span className='temperatura-span'>{(weather.main.temp).toFixed(0)}</span><span className='icon-grau'>º</span></>) :
                 (<span></span>)
               }</p>
               

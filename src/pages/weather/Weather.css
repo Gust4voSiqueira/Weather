@@ -11,26 +11,40 @@ div.Weather-container {
 }
 
 div.Weather-container  img{
-    width: 60%;
+    width: 20%;
 }
 
-div.Weather-container  p {
-    font-size: 13rem;
+div.Weather-container  .temperatura-span{
+    font-size: 45pt;
     font-weight: 500;
+}
+
+p.temperatura-container {
+    position: relative;
+}
+
+div.Weather-container  .icon-grau{
+    font-size: 30pt;
+    font-weight: 500;
+    margin: 0;
+    color: black;
+
+    position: absolute;
+    bottom: 0;
 }
 
 div.Weather-container  p.city-name {
     font-size: 20pt;
     font-weight: 900;
     display: block;
-    margin-top: 50px;
+    margin-top: 20px;
 }
-
+ 
 div.Weather-container  .temp-umd-container{
     display: flex;
     justify-content: space-between;
 
-    width: 45%;
+    width: 20%;
 }
 
 div.Weather-container .temp-umd-container .temperatura, .umidade {
@@ -66,5 +80,29 @@ div.Weather-container .temp-umd-container .temperatura, .umidade span{
   @keyframes is-rotating {
     to {
       transform: rotate(1turn);
+    }
+  }
+
+  @media (max-width: 1048px) {
+    div.Weather-container  p.city-name {
+        font-size: 20pt;
+        font-weight: 900;
+        display: block;
+        margin-top: 50px;
+    }
+
+    div.Weather-container  img{
+        width: 60%;
+    }
+
+    div.Weather-container  .temp-umd-container{
+        display: flex;
+        justify-content: space-between;
+    
+        width: 45%;
+    }
+
+    .icon-grau {
+        font-size: 5rem;
     }
   }
