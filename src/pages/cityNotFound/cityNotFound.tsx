@@ -12,7 +12,7 @@ export function cityNotFound() {
 
             <div className="text">
                 <h1>Parece que não encontramos sua cidade,</h1>
-                <h1>Tente buscar por outra!</h1>
+                <p>Tente buscar por outra!</p>
             </div>
         </div>
     )
