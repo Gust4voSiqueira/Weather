@@ -1,0 +1,37 @@
+.cityNotFound-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 30px 0;
+}
+
+.cityNotFound-container img {
+    width: 40%;
+    margin-top: 40px;
+}
+
+.cityNotFound-container h1 {
+    font-family: 'Poppins';
+    font-size: 17pt;
+}
+
+.cityNotFound-container .text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+@media (max-width: 1048px) {
+    .cityNotFound-container img {
+        width: 80%;
+        margin-top: 90px;
+    }
+    .cityNotFound-container h1 {
+        font-family: 'Poppins';
+        font-size: 12pt;
+    }
+}

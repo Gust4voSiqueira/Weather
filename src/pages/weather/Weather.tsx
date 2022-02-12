@@ -18,7 +18,11 @@ export default function Weather() {
 const { weather } = useSearch()
 
 useEffect(() => {
-  imageSearch()
+  if(weather.cod === '404') {
+    window.location.href = "/cityNotFound"
+  } else {
+    imageSearch()
+  }
 }, [weather])
 
 const imageSearch = () => {

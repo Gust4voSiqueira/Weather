@@ -11,11 +11,13 @@ export default function SearchProvider({ children }) {
 
     const search = (city) => {
         const localCity = city.trim()
+
         fetch(`${api.base}weather?q=${localCity}&units=metric&APPID=${api.key}`)
         .then(res => res.json())
         .then(result => {
             setWeather(result)
-        });
+            console.log(result)
+        })
     }
 
         const store = {
