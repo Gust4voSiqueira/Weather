@@ -11,19 +11,19 @@ export default function Input() {
 
     return (
         <>
-                <div className="submit-line">
+            <form className="submit-line">
                 <input type="text" placeholder='Buscar' onChange={(e) => {
                     setCity(e.target.value)
                 }} value={city}/>
                     
                     <Link to="/Weather">
-                        <div className="submit-lente" onClick={() => {
+                        <button className="submit-lente" onClick={() => {
                             search(city)
                         }}>
                         < BsSearch />
-                        </div>
+                        </button>
                     </Link>
-            </div>
+            </form>
             
             </>
             )

@@ -7,9 +7,8 @@
     padding: 30px 0;
 }
 
-.cityNotFound-container img {
-    width: 40%;
-    margin-top: 40px;
+.cityNotFound-container .animation {
+    margin-top: 20px;
 }
 
 .cityNotFound-container h1 {
@@ -32,9 +31,8 @@
 
 
 @media (max-width: 1048px) {
-    .cityNotFound-container img {
-        width: 80%;
-        margin-top: 90px;
+    .cityNotFound-container .animation {
+        margin-top: 30px;
     }
     .cityNotFound-container h1 {
         font-family: 'Poppins';

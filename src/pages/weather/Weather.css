@@ -30,7 +30,7 @@ div.Weather-container  .icon-grau{
     color: black;
 
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
 }
 
 div.Weather-container  p.city-name {
@@ -72,8 +72,8 @@ div.Weather-container .temp-umd-container .temperatura, .umidade span{
     border: 10px solid #031716;
     border-radius: 50%;
     border-top-color: #51d4db;
-    height: 150px;
-    width: 150px;
+    height: 110px;
+    width: 110px;
     margin-top: 200px;
   }
   

@@ -1,14 +1,14 @@
 import Input from '../../components/input/Input'
 import './cityNotFound.css'
-
-import CityNotFoundImage from '../../images/banner-citynotfound.png'
+import animationData from './animation.gif';
 
 export function cityNotFound() {
+
     return (
         <div className='cityNotFound-container'>
             <Input />
-        
-            <img src={CityNotFoundImage} alt="CityNotFoundImage" />
+            
+            <img src={animationData} alt="animação" />
 
             <div className="text">
                 <h1>Parece que não encontramos sua cidade,</h1>
