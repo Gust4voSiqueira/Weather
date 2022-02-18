@@ -32,19 +32,19 @@ const imageSearch = () => {
         return clearSky
       case "Clouds":
         return fewClouds
-      case "scattered clouds":
+      case "Scattered clouds":
         return scatteredClouds
-      case "broken clouds":
+      case "Broken clouds":
         return brokenClouds
       case "Drizzle":
         return showerRain
       case "Rain":
         return rain
-      case "thunderstorm":
+      case "Thunderstorm":
         return thunderstorm
       case "Snow":
         return snow
-      case "mist":
+      case "Mist":
         return mist
     }
   } else {
@@ -52,6 +52,7 @@ const imageSearch = () => {
   }
 }
 
+console.log(weather)
 
 return (
   <div className='Weather-container'>
